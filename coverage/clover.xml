@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1556992110096" clover="3.2.0">
+  <project timestamp="1556992110097" name="All files">
+    <metrics statements="82" coveredstatements="58" conditionals="24" coveredconditionals="16" methods="37" coveredmethods="23" elements="143" coveredelements="97" complexity="0" loc="82" ncloc="82" packages="7" files="9" classes="9"/>
+    <package name="components.Common.Wrapper">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="index.jsx" path="/Users/luciano/Projetos/react-starter/src/components/Common/Wrapper/index.jsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="10" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="containers.PokemonsList">
+      <metrics statements="8" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="2"/>
+      <file name="index.jsx" path="/Users/luciano/Projetos/react-starter/src/containers/PokemonsList/index.jsx">
+        <metrics statements="8" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="2"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="pages.Home">
+      <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="index.jsx" path="/Users/luciano/Projetos/react-starter/src/pages/Home/index.jsx">
+        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="5" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="pages.NotFound">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="index.jsx" path="/Users/luciano/Projetos/react-starter/src/pages/NotFound/index.jsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="pages.PokemonDetails">
+      <metrics statements="17" coveredstatements="0" conditionals="8" coveredconditionals="0" methods="9" coveredmethods="0"/>
+      <file name="index.jsx" path="/Users/luciano/Projetos/react-starter/src/pages/PokemonDetails/index.jsx">
+        <metrics statements="17" coveredstatements="0" conditionals="8" coveredconditionals="0" methods="9" coveredmethods="0"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="20" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="33" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="60" count="0" type="stmt"/>
+        <line num="69" count="0" type="stmt"/>
+        <line num="74" count="0" type="stmt"/>
+        <line num="75" count="0" type="stmt"/>
+        <line num="76" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="redux-flow.ducks">
+      <metrics statements="39" coveredstatements="39" conditionals="11" coveredconditionals="11" methods="14" coveredmethods="14"/>
+      <file name="pokemonDetails.js" path="/Users/luciano/Projetos/react-starter/src/redux-flow/ducks/pokemonDetails.js">
+        <metrics statements="20" coveredstatements="20" conditionals="6" coveredconditionals="6" methods="7" coveredmethods="7"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="31" count="7" type="cond" truecount="5" falsecount="0"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="46" count="2" type="stmt"/>
+        <line num="53" count="1" type="stmt"/>
+        <line num="59" count="2" type="stmt"/>
+        <line num="66" count="2" type="stmt"/>
+        <line num="73" count="2" type="stmt"/>
+        <line num="77" count="3" type="stmt"/>
+        <line num="81" count="2" type="stmt"/>
+        <line num="86" count="1" type="stmt"/>
+        <line num="91" count="1" type="stmt"/>
+        <line num="92" count="1" type="stmt"/>
+        <line num="94" count="1" type="stmt"/>
+        <line num="98" count="1" type="stmt"/>
+        <line num="100" count="1" type="stmt"/>
+        <line num="102" count="1" type="stmt"/>
+      </file>
+      <file name="pokemons.js" path="/Users/luciano/Projetos/react-starter/src/redux-flow/ducks/pokemons.js">
+        <metrics statements="19" coveredstatements="19" conditionals="5" coveredconditionals="5" methods="7" coveredmethods="7"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="22" count="2" type="stmt"/>
+        <line num="29" count="7" type="cond" truecount="4" falsecount="0"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="37" count="2" type="stmt"/>
+        <line num="40" count="2" type="stmt"/>
+        <line num="44" count="2" type="stmt"/>
+        <line num="51" count="2" type="stmt"/>
+        <line num="58" count="2" type="stmt"/>
+        <line num="64" count="3" type="stmt"/>
+        <line num="68" count="3" type="stmt"/>
+        <line num="73" count="2" type="stmt"/>
+        <line num="78" count="1" type="stmt"/>
+        <line num="79" count="1" type="stmt"/>
+        <line num="81" count="1" type="stmt"/>
+        <line num="85" count="1" type="stmt"/>
+        <line num="87" count="1" type="stmt"/>
+        <line num="89" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="utils">
+      <metrics statements="15" coveredstatements="15" conditionals="5" coveredconditionals="5" methods="5" coveredmethods="5"/>
+      <file name="apiError.js" path="/Users/luciano/Projetos/react-starter/src/utils/apiError.js">
+        <metrics statements="3" coveredstatements="3" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+      </file>
+      <file name="request.js" path="/Users/luciano/Projetos/react-starter/src/utils/request.js">
+        <metrics statements="12" coveredstatements="12" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="4"/>
+        <line num="4" count="4" type="stmt"/>
+        <line num="6" count="4" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="10" count="4" type="stmt"/>
+        <line num="11" count="2" type="cond" truecount="4" falsecount="0"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="18" count="4" type="stmt"/>
+        <line num="19" count="2" type="stmt"/>
+        <line num="30" count="2" type="stmt"/>
+        <line num="32" count="2" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
