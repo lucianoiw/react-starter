@@ -2,7 +2,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 import configureStore from 'redux-mock-store';
 
-import NotFoundPage from '..';
+import NotFoundPage from '../index';
 
 describe('NotFoundPage', () => {
   const initialState = {};

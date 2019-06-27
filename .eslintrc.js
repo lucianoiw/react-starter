@@ -26,7 +26,17 @@ module.exports = {
   settings: {
     'import/resolver': {
       alias: {
-        map: [['~', '.'], ['@', './src'], ['@Common', './src/components/Common']],
+        map: [
+          ['@App', './'],
+          ['@Src', './src'],
+          ['@Pages', './src/pages'],
+          ['@Ducks', './src/redux-flow/ducks'],
+          ['@Assets', './src/assets'],
+          ['@Components', './src/components'],
+          ['@Containers', './src/containers'],
+          ['@Common', './src/components/Common'],
+          ['@Utils', './src/utils']
+        ],
         extensions: ['.js', '.jsx', '.json'],
       },
     },

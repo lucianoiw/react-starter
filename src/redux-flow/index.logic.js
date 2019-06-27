@@ -1,4 +1,7 @@
-import { loadLogic as loadPokemons } from './ducks/pokemons';
-import { loadLogic as loadPokemonDetails } from './ducks/pokemonDetails';
+import { loadLogic as loadUsers } from '@Ducks/users';
+import { loadLogic as loadUserDetails } from '@Ducks/userDetails';
 
-export default [loadPokemons, loadPokemonDetails];
+export default [
+  loadUsers,
+  loadUserDetails,
+];

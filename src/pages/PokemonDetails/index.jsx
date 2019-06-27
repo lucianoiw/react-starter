@@ -4,48 +4,44 @@ import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import {
-  load as loadPokemonDetails,
-  clear as clearPokemonDetails,
-} from '../../redux-flow/ducks/pokemonDetails';
+  load as loadUserDetails,
+  clear as clearUserDetails,
+} from '@Ducks/userDetails';
 
 class PokemonDetails extends Component {
   componentDidMount() {
     const { props } = this;
-    props.loadPokemonDetails(props.match.params.slug);
+
+    props.loadUserDetails(props.match.params.id);
   }
 
   componentDidUpdate(prevProps) {
     const { props } = this;
 
-    if (prevProps.match.params.slug !== props.match.params.slug) {
-      props.loadPokemonDetails(props.match.params.slug);
+    if (prevProps.match.params.id !== props.match.params.id) {
+      props.loadUserDetails(props.match.params.id);
     }
   }
 
   componentWillUnmount() {
     const { props } = this;
-    props.clearPokemonDetails();
+    props.clearUserDetails();
   }
 
   render() {
     const { props } = this;
 
-    if (props.pokemonDetailsLoading) {
-      return <div>Loading...</div>;
+    if (props.userDetailsLoading) {
+      return <div>Carregando...</div>;
     }
 
     return (
       <>
-        {props.pokemonDetails && (
+        {props.userDetails && (
           <div>
-            <h1>{props.pokemonDetails.name}</h1>
-
-            {props.pokemonDetails.sprites
-              && Object.entries(props.pokemonDetails.sprites).map(([size, url]) => (
-                <div key={size}>
-                  <img src={url} alt={size} />
-                </div>
-              ))}
+            <h1>{props.userDetails.name}</h1>
+            E-mail:
+            {props.userDetails.email}
 
             <hr />
 
@@ -60,20 +56,23 @@ class PokemonDetails extends Component {
 PokemonDetails.propTypes = {
   match: PropTypes.shape({
     params: PropTypes.shape({
-      slug: PropTypes.string,
+      id: PropTypes.string,
     }),
   }).isRequired,
-  loadPokemonDetails: PropTypes.func.isRequired,
+  loadUserDetails: PropTypes.func.isRequired,
+  clearUserDetails: PropTypes.func.isRequired,
+  userDetails: PropTypes.object.isRequired,
+  userDetailsLoading: PropTypes.bool.isRequired,
 };
 
 const mapStateToProps = state => ({
-  pokemonDetails: state.pokemonDetails.data,
-  pokemonDetailsLoading: state.pokemonDetails.loading,
+  userDetails: state.userDetails.data,
+  userDetailsLoading: state.userDetails.loading,
 });
 
 export const mapDispatchToProps = dispatch => ({
-  loadPokemonDetails: slug => dispatch(loadPokemonDetails(slug)),
-  clearPokemonDetails: () => dispatch(clearPokemonDetails()),
+  loadUserDetails: slug => dispatch(loadUserDetails(slug)),
+  clearUserDetails: () => dispatch(clearUserDetails()),
 });
 
 export default connect(

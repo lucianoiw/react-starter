@@ -1,11 +1,13 @@
 import { combineReducers } from 'redux';
 
-import pokemons from './ducks/pokemons';
-import pokemonDetails from './ducks/pokemonDetails';
+import users from '@Ducks/users';
+import userDetails from '@Ducks/userDetails';
+import account from '@Ducks/account';
 
 const reducers = combineReducers({
-  pokemons,
-  pokemonDetails,
+  users,
+  userDetails,
+  account,
 });
 
 export default reducers;

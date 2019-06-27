@@ -1,20 +1,21 @@
 import { createLogic } from 'redux-logic';
 
-import { API_URL } from '../../utils/request';
+import { API_URL } from '@Utils/request';
 
 /* Types */
 
 export const Types = {
-  LOAD: 'pokemons/LOAD',
-  LOAD_SUCCESS: 'pokemons/LOAD_SUCCESS',
-  LOAD_ERROR: 'pokemons/LOAD_ERROR',
+  LOAD: 'users/LOAD',
+  LOAD_SUCCESS: 'users/LOAD_SUCCESS',
+  LOAD_ERROR: 'users/LOAD_ERROR',
 };
 
 /* Models */
 
 const dataModel = data => ({
-  name: data.name,
-  url: data.url,
+  id: data.id,
+  name: data.last_name,
+  url: data.avatar,
 });
 
 /* Reducer */
@@ -37,7 +38,7 @@ export default function reducer(state = initialState, action) {
       return {
         ...state,
         loading: false,
-        data: action.payload.results.map(item => dataModel(item)),
+        data: action.payload.data.map(item => dataModel(item)),
       };
 
     case Types.LOAD_ERROR:
@@ -76,7 +77,7 @@ export const loadLogic = createLogic({
 
   async process({ request }, dispatch, done) {
     try {
-      const endpoint = `${API_URL}/pokemon`;
+      const endpoint = `${API_URL}/users`;
 
       const response = await request(endpoint, {
         method: 'GET',

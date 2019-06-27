@@ -16,9 +16,15 @@ module.exports = {
     extensions: ['.js', '.jsx', '.json'],
     alias: {
       'styled-components': path.resolve(config.appPath, 'node_modules', 'styled-components'),
-      '~': path.resolve(config.appPath),
-      '@': path.resolve(config.appPath, 'src'),
+      '@App': path.resolve(config.appPath),
+      '@Src': path.resolve(config.appPath, 'src'),
+      '@Ducks': path.resolve(config.appPath, 'src', 'redux-flow', 'ducks'),
+      '@Pages': path.resolve(config.appPath, 'src', 'pages'),
+      '@Assets': path.resolve(config.appPath, 'src', 'assets'),
+      '@Components': path.resolve(config.appPath, 'src', 'components'),
+      '@Containers': path.resolve(config.appPath, 'src', 'containers'),
       '@Common': path.resolve(config.appPath, 'src', 'components', 'Common'),
+      '@Utils': path.resolve(config.appPath, 'src', 'utils'),
     },
   },
   module: {

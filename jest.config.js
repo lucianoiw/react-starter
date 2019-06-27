@@ -71,6 +71,18 @@ module.exports = {
     },
   },
 
+  moduleNameMapper: {
+    '^@App(.*)$': '<rootDir>/$1',
+    '^@Src(.*)$': '<rootDir>/src$1',
+    '^@Pages(.*)$': '<rootDir>/src/pages$1',
+    '^@Ducks(.*)$': '<rootDir>/src/redux-flow/ducks$1',
+    '^@Assets(.*)$': '<rootDir>/src/assets$1',
+    '^@Components(.*)$': '<rootDir>/src/components$1',
+    '^@Containers(.*)$': '<rootDir>/src/containers$1',
+    '^@Common(.*)$': '<rootDir>/src/components/Common$1',
+    '^@Utils(.*)$': '<rootDir>/src/utils$1',
+  },
+
   // Indicates whether each individual test should be reported during the run
   verbose: true,
 };

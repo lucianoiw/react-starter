@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot error 1`] = `
+<Fragment>
+  Ocorreu um erro!
+</Fragment>
+`;
+
+exports[`snapshot loading 1`] = `
+<Fragment>
+  Carregando...
+</Fragment>
+`;
+
+exports[`snapshot timeout 1`] = `
+<Fragment>
+  Ocorreu um erro!
+</Fragment>
+`;

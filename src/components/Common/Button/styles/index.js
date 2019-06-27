@@ -10,9 +10,6 @@ export const Tag = styled.button`
         break;
     }
 
-    console.log();
     return 'green';
   }};
-
-  ${props => console.log(props)}
 `;

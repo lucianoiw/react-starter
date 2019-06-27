@@ -1,22 +1,23 @@
 import { createLogic } from 'redux-logic';
 
-import { API_URL } from '../../utils/request';
+import { API_URL } from '@Utils/request';
 
 /* Types */
 
 export const Types = {
-  LOAD: 'pokemonDetails/LOAD',
-  LOAD_SUCCESS: 'pokemonDetails/LOAD_SUCCESS',
-  LOAD_ERROR: 'pokemonDetails/LOAD_ERROR',
-  CLEAR: 'pokemonDetails/CLEAR',
+  LOAD: 'userDetails/LOAD',
+  LOAD_SUCCESS: 'userDetails/LOAD_SUCCESS',
+  LOAD_ERROR: 'userDetails/LOAD_ERROR',
+  CLEAR: 'userDetails/CLEAR',
 };
 
 /* Models */
 
 const dataModel = data => ({
-  name: data.name,
-  abilities: data.abilities,
-  sprites: data.sprites,
+  id: data.id,
+  name: `${data.first_name} ${data.last_name}`,
+  email: data.email,
+  avatar: data.avatar,
 });
 
 /* Reducer */
@@ -39,7 +40,7 @@ export default function reducer(state = initialState, action) {
       return {
         ...state,
         loading: false,
-        data: dataModel(action.payload),
+        data: dataModel(action.payload.data),
       };
 
     case Types.LOAD_ERROR:
@@ -62,10 +63,10 @@ export default function reducer(state = initialState, action) {
 
 /* Action Creators */
 
-export function load(slug) {
+export function load(id) {
   return {
     type: Types.LOAD,
-    slug,
+    id,
   };
 }
 
@@ -89,7 +90,7 @@ export const loadLogic = createLogic({
 
   async process({ request, action }, dispatch, done) {
     try {
-      const endpoint = `${API_URL}/pokemon/${action.slug}`;
+      const endpoint = `${API_URL}/users/${action.id}`;
 
       const response = await request(endpoint, {
         method: 'GET',

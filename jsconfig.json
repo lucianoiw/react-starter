@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "allowSyntheticDefaultImports": false,
+    "baseUrl": "./",
+    "paths": {
+      "@App/*": [
+        "./*"
+      ],
+      "@Src/*": [
+        "./src/*"
+      ],
+      "@Pages/*": [
+        "./src/pages/*"
+      ],
+      "@Assets/*": [
+        "./src/assets/*"
+      ],
+      "@Components/*": [
+        "./src/components/*"
+      ],
+      "@Containers/*": [
+        "./src/containers/*"
+      ],
+      "@Common/*": [
+        "./src/components/Common/*"
+      ],
+      "@Ducks/*": [
+        "./src/redux-flow/ducks/*"
+      ],
+      "@Utils/*": [
+        "./src/utils/*"
+      ]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}

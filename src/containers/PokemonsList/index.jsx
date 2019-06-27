@@ -1,25 +1,30 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import Wrapper from '@Common/Wrapper';
 
-import { load as loadPokemons } from '../../redux-flow/ducks/pokemons';
+import { load as loadUsers } from '@Ducks/users';
 
 export class PokemonsList extends Component {
   componentDidMount() {
     const { props } = this;
-    props.loadPokemons();
+    props.loadUsersDispatch();
   }
 
   render() {
-    const { props } = this;
+    const { users, usersLoading } = this.props;
+
+    if (usersLoading) {
+      return 'Carregando...';
+    }
 
     return (
       <Wrapper>
-        {props.pokemons.map(item => (
+        {users.map(item => (
           <div key={item.name}>
-            <NavLink to={`/${item.name}`}>{item.name}</NavLink>
+            <NavLink to={`/users/${item.id}`}>{item.name}</NavLink>
           </div>
         ))}
       </Wrapper>
@@ -27,13 +32,22 @@ export class PokemonsList extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  pokemons: state.pokemons.data,
+const mapStateToProps = ({
+  users,
+}) => ({
+  users: users.data,
+  usersLoading: users.loading,
 });
 
 export const mapDispatchToProps = dispatch => ({
-  loadPokemons: () => dispatch(loadPokemons()),
+  loadUsersDispatch: () => dispatch(loadUsers()),
 });
+
+PokemonsList.propTypes = {
+  loadUsersDispatch: PropTypes.func.isRequired,
+  users: PropTypes.array.isRequired,
+  usersLoading: PropTypes.bool.isRequired,
+};
 
 export default connect(
   mapStateToProps,
